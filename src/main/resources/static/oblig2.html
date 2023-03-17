@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig 2</title>
+    <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class ="row">
+        <div class="col-md-4">
+            <form class="form" onsubmit="post()">
+
+                <h1>Bestilling av kinobiletter</h1>
+
+                <div class="form-group">
+
+                    <label for="dropdown">Velg film: </label>
+
+                    <select class="form-control" name="Velg film her" id="dropdown" style="width: 130px">
+
+                        <option value="none" selected disabled hidden>Velg film her</option>
+                        <option value="Film 1">Film 1</option>
+                        <option value="Film 2">Film 2</option>
+                        <option value="Film 3">Film 3</option>
+                        <option value="Film 4">Film 4</option>
+
+                    </select>
+                    <div id="feilFilm"> </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="antall">Antall</label>
+                    <input type="text" id="antall" style="width: 45px" class="form-control">
+                    <div id="feilAntall"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" id="fornavn" class="form-control">
+                    <div id="feilFornavn"></div>
+                </div>
+                <div class="form-group">
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" id="etternavn" class="form-control">
+                    <div id="feilEtternavn"></div>
+                </div>
+                <div class="form-group">
+                    <label for="telefonnr">Telefonnr</label>
+                    <input type="text" id="telefonnr" class="form-control">
+                    <div id="feilTelefonnr"></div>
+                </div>
+                <div class="form-group">
+                    <label for="epost">Epost</label>
+                    <input type="text" id="epost" class="form-control">
+                    <div id="feilEpost"></div>
+                </div>
+
+            </form>
+
+            <button type="submit" class="btn btn-success" onclick="sjekkInnhold()">Kjøp billlett</button>
+        </div>
+
+        <div class="col-md-8">
+            <h1>Alle billetter</h1>
+
+            <div id="visBilletter"></div>
+
+            <button type="delete" class="btn btn-danger" onclick="slettVerdier()">Slett alle billetter</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
